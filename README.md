@@ -71,7 +71,11 @@ This will render a pdf like [example.pdf](example.pdf)
 
 ## Develop
 
+You'll need the [now-cli](https://zeit.co/download)
 
+```
+$ npm run dev
+```
 
 # License
 
