@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "name": "louie-template-to-pdf",
+  "scope": "alheimsins",
+  "alias": "pdf.louie.alheimsins.net",
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "/*.md",
+      "use": "@now/md"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/generate/pdf",
+      "dest": "/api/generate-pdf.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/README.html"
+    }
+  ]
+}
