@@ -1,6 +1,40 @@
 {
-  "template": "varsel",
-  "data": {
-    "title": "Hello PDF!"
-  }
+  "header": [
+    {
+      "fontSize": 12,
+      "text": "1971-11-18",
+      "startAt": {
+        "x": 450,
+        "y": 50
+      }
+    },
+    {
+      "fontSize": 20,
+      "text": "This is my head",
+      "startAt": {
+        "x": 100,
+        "y": 80
+      }
+    }
+  ],
+  "body": [
+    {
+      "fontSize": 16,
+      "text": "This is my first line of text"
+    },
+    {
+      "fontSize": 16,
+      "text": "This is my second line of text"
+    }
+  ],
+  "footer": [
+    {
+      "fontSize": 12,
+      "text": "This is my foot",
+      "startAt": {
+        "x": 100,
+        "y": 700
+      }
+    }
+  ]
 }
