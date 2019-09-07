@@ -6,6 +6,7 @@ module.exports = async (request, response) => {
 
     // Initialize the document and streams it to the output
     const doc = new PDFDocument()
+    response.setHeader('Content-Type', 'application/pdf')
     doc.pipe(response)
 
     const renderElement = item => {
