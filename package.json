@@ -8,7 +8,7 @@
     "test": "standard",
     "deploy": "now --prod",
     "dev": "now dev",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm"
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i"
   },
   "repository": {
     "type": "git",
