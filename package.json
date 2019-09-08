@@ -14,7 +14,18 @@
     "url": "git+https://github.com/Alheimsins/louie-template-to-pdf.git"
   },
   "keywords": [],
-  "author": "Geir Gåsodden <geir.gasodden@pythonia.no> (https://github.com/zrrrzzt)",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Enge",
+      "email": "jonas.enge@gmail.com",
+      "url": "https://github.com/maccyber"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Alheimsins/louie-template-to-pdf/issues"

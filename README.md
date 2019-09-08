@@ -16,7 +16,7 @@ A good way to create your template is to look at the live demo of [pdfKit](http:
 
 ## API
 
-### `POST /api/pdf`
+### `POST /api/generate/pdf`
 
 Post the template and get a pdf in return
 
