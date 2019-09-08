@@ -1,10 +1,11 @@
 {
   "name": "louie-template-to-pdf",
   "version": "1.0.0",
-  "description": "Post a template and some data, get a pdf in return",
+  "description": "Post some data, get a pdf in return",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard",
     "deploy": "now --prod",
     "dev": "now dev",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm"
@@ -13,7 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/Alheimsins/louie-template-to-pdf.git"
   },
-  "keywords": [],
+  "keywords": [
+    "pdf",
+    "pdfKit",
+    "louie",
+    "microservice"
+  ],
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
@@ -37,5 +43,8 @@
   "devDependencies": {
     "ava": "2.3.0",
     "standard": "14.1.0"
+  },
+  "engines": {
+    "node": ">=10.16.3"
   }
 }
