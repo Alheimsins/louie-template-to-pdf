@@ -1,4 +1,5 @@
 const PDFDocument = require('pdfkit')
+const getType = require('../lib/get-type')
 
 module.exports = async (request, response) => {
   try {
@@ -11,10 +12,14 @@ module.exports = async (request, response) => {
 
     const renderElement = item => {
       const { startAt, fontSize, text } = item
-      if (startAt) {
-        doc.fontSize(fontSize).text(text, startAt.x, startAt.y)
-      } else {
-        doc.fontSize(fontSize).text(text)
+      const type = getType(item)
+
+      if (type === 'text') {
+        if (startAt) {
+          doc.fontSize(fontSize).text(text, startAt.x, startAt.y)
+        } else {
+          doc.fontSize(fontSize).text(text)
+        }
       }
       doc.save()
     }
