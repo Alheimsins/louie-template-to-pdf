@@ -42,6 +42,8 @@ module.exports = async (request, response) => {
       } else if (type === 'fillColor') {
         const { fillColor } = item
         doc.fillColor(fillColor)
+      } else if (type === 'moveDown') {
+        doc.moveDown()
       }
       doc.save()
     }
