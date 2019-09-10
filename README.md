@@ -24,38 +24,65 @@ Post the template and get a pdf in return
 {
   "header": [
     {
-      "fontSize": 12,
-      "text": "1971-11-18",
+      "imageData": "data:image/png;base64, <base64-data>",
       "startAt": {
-        "x": 450,
-        "y": 50
+        "x": 50,
+        "y": 10
+      },
+      "options": {
+        "fit": [50, 50]
       }
     },
     {
-      "fontSize": 20,
+      "fontSize": 26
+    },
+    {
+      "text": "Alheimsins School of Awesomeness",
+      "startAt": {
+        "x": 110,
+        "y": 25
+      }
+    },
+    {
+      "fontSize": 12
+    },
+    {
+      "text": "1971-11-18",
+      "startAt": {
+        "x": 475,
+        "y": 70
+      }
+    },
+    {
+      "fontSize": 20
+    },
+    {
       "text": "This is my head",
       "startAt": {
-        "x": 100,
-        "y": 80
+        "x": 50,
+        "y": 100
       }
     }
   ],
   "body": [
     {
-      "fontSize": 16,
+      "fontSize": 16
+    },
+    {
       "text": "This is my first line of text"
     },
     {
-      "fontSize": 16,
       "text": "This is my second line of text"
     }
   ],
   "footer": [
     {
-      "fontSize": 12,
+      "fontSize": 12
+    },
+    {
       "text": "This is my foot",
       "startAt": {
-        "x": 100,
+        "x": 50,
         "y": 700
       }
     }
