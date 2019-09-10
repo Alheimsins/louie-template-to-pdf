@@ -11,25 +11,37 @@ module.exports = async (request, response) => {
     doc.pipe(response)
 
     const renderElement = item => {
-      const { startAt, fontSize, text, imageData, imageOptions } = item
+      const { startAt, options } = item
       const type = getType(item)
 
       if (type === 'text') {
-        if (startAt) {
-          doc.fontSize(fontSize).text(text, startAt.x, startAt.y)
+        const { text } = item
+        if (startAt && options) {
+          doc.text(text, startAt.x, startAt.y, options)
+        } else if (startAt) {
+          doc.text(text, startAt.x, startAt.y)
+        } else if (options) {
+          doc.text(text, options)
         } else {
-          doc.fontSize(fontSize).text(text)
+          doc.text(text)
         }
       } else if (type === 'image') {
-        if (startAt && imageOptions) {
-          doc.image(imageData, startAt.x, startAt.y, imageOptions)
+        const { imageData } = item
+        if (startAt && options) {
+          doc.image(imageData, startAt.x, startAt.y, options)
         } else if (startAt) {
           doc.image(imageData, startAt.x, startAt.y)
-        } else if (imageOptions) {
-          doc.image(imageData, imageOptions)
+        } else if (options) {
+          doc.image(imageData, options)
         } else {
           doc.image(imageData)
         }
+      } else if (type === 'fontSize') {
+        const { fontSize } = item
+        doc.fontSize(fontSize)
+      } else if (type === 'fillColor') {
+        const { fillColor } = item
+        doc.fillColor(fillColor)
       }
       doc.save()
     }
