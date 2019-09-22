@@ -63,5 +63,29 @@
         "y": 700
       }
     }
+  ],
+  "watermark": [
+    {
+      "rotate": 45,
+      "options": {
+        "origin": [5, 150]
+      }
+    },
+    {
+      "fillColor": "red"
+    },
+    {
+      "opacity": 0.3
+    },
+    {
+      "fontSize": 60
+    },
+    {
+      "text": "Forhåndsvisning",
+      "startAt": {
+        "x": 100,
+        "y": 50
+      }
+    }
   ]
 }

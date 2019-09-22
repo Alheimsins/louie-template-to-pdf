@@ -3,7 +3,7 @@ const getType = require('../lib/get-type')
 
 module.exports = async (request, response) => {
   try {
-    const { header, body, footer } = await request.body
+    const { header, body, footer, watermark } = await request.body
 
     // Initialize the document and streams it to the output
     const doc = new PDFDocument()
@@ -36,6 +36,13 @@ module.exports = async (request, response) => {
         } else {
           doc.image(imageData)
         }
+      } else if (type === 'rotate') {
+        const { rotate } = item
+        if (options) {
+          doc.rotate(rotate, options)
+        } else {
+          doc.rotate(rotate)
+        }
       } else if (type === 'fontSize') {
         const { fontSize } = item
         doc.fontSize(fontSize)
@@ -44,6 +51,9 @@ module.exports = async (request, response) => {
         doc.fillColor(fillColor)
       } else if (type === 'moveDown') {
         doc.moveDown()
+      } else if (type === 'opacity') {
+        const { opacity } = item
+        doc.opacity(opacity)
       }
       doc.save()
     }
@@ -58,6 +68,10 @@ module.exports = async (request, response) => {
 
     if (footer) {
       footer.map(renderElement)
+    }
+
+    if (watermark) {
+      watermark.map(renderElement)
     }
 
     doc.end()

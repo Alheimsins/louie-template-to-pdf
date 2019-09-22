@@ -24,7 +24,7 @@ Post the template and get a pdf in return
 {
   "header": [
     {
-      "imageData": "data:image/png;base64, <base64-data>",
+      "imageData": "<base64-data>",
       "startAt": {
         "x": 50,
         "y": 10
@@ -84,6 +84,30 @@ Post the template and get a pdf in return
       "startAt": {
         "x": 50,
         "y": 700
+      }
+    }
+  ],
+  "watermark": [
+    {
+      "rotate": 45,
+      "options": {
+        "origin": [5, 150]
+      }
+    },
+    {
+      "fillColor": "red"
+    },
+    {
+      "opacity": 0.3
+    },
+    {
+      "fontSize": 60
+    },
+    {
+      "text": "Forhåndsvisning",
+      "startAt": {
+        "x": 100,
+        "y": 50
       }
     }
   ]
