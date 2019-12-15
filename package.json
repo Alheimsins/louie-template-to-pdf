@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/Alheimsins/louie-template-to-pdf#readme",
   "dependencies": {
-    "pdfkit": "0.10.0"
+    "pdfkit": "0.11.0"
   },
   "devDependencies": {
     "ava": "2.4.0",
