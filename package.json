@@ -1,6 +1,6 @@
 {
   "name": "louie-template-to-pdf",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Post some data, get a pdf in return",
   "main": "index.js",
   "private": true,
