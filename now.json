@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "name": "louie-template-to-pdf",
   "scope": "alheimsins",
-  "alias": "pdf.louie.alheimsins.net",
   "builds": [
     {
       "src": "api/*.js",
