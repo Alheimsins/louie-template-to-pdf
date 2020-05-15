@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/Alheimsins/louie-template-to-pdf.svg?branch=master)](https://travis-ci.com/Alheimsins/louie-template-to-pdf)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # louie-template-to-pdf
 
 Post some data, get a pdf in return.
